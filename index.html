@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+     <script src="index.js"> </script>
+</head>
+<body>
+        <img id="image" height="200" width="450" border="3">
+        <br>
+        <input type="file" id="file" onchange="imagePreview(event)">
+        <br>
+    <button id="deletefile">deletefile</button
+        <br>
+    <h3>created by deepak aggarwal for sample</h3>
+    <br>
+    <h3>contact at :8168173141</h3>
+ </div>
+<script>
+
+    function imagePreview(event) {
+        let image=document.getElementById('image');
+        let file=document.getElementById('file');
+        var fname=image.value;
+        image.src=URL.createObjectURL(event.target.files[0]);
+        console.log(file.value);
+        alert("thanks for uploading file");
+               
+        }
+     let deletefile=document.getElementById('deletefile');
+     let image=document.getElementById('image');
+     deletefile.addEventListener('click',function () {
+        image.parentNode.removeChild(image);
+        alert("aap to bada bashram ho delete kardi photo");
+     });
+</script>
+<style>
+    body{
+        background-color: deeppink;
+    }
+    #image{
+        border: color(srgb red green blue);
+    }
+    .cent{
+         display: flex;
+        align-items: left;  
+        border-radius: 600cm;   
+        height: 560cm;
+        width: 400cm;
+    }
+    @media screen and(-webkit-full-screen)
+    {
+        body{         
+            background-color: aquamarine;
+        }
+    }
+    @media screen and (width:767px){
+        body{
+            background-color: yellow;
+        }
+    }
+    @media screen and (width:600px){
+        body{
+            background-color: azure;
+        }
+    }
+</style>
+</body>
+</html>
